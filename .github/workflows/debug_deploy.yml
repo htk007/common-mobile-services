@@ -18,6 +18,9 @@ jobs:
         with:
           java-version: 11
           distribution: 'adopt'
+  # Eklenen temizleme adımı
+      - name: Clean Project
+        run: ./gradlew clean
       # 3
       - name: Generate Debug APK
         run: ./gradlew assembleDebug --stacktrace
